@@ -187,7 +187,7 @@
           <!-- Pronunciations -->
           <xsl:if test="phonetic/@value">
             <xsl:for-each select="phonetic">
-              <span d:priority="2">Pronunciation:
+              <span>Pronunciation:
                 [<xsl:call-template name="pronunciation">
                     <xsl:with-param name="text" select="@value"/>
                 </xsl:call-template>]
@@ -313,7 +313,7 @@
         </xsl:text>
       </xsl:for-each>
 
-      <!-- FOOTER -->
+      <!-- Footer -->
       <d:entry id="front_back_matter" d:title="Front/Back Matter">
 <h1>Swedish–English</h1>
 <p>
