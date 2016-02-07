@@ -172,7 +172,7 @@
                 <li>
                   <xsl:value-of select="@value"/>
                   <xsl:if test="@comment">
-                    [<xsl:value-of select="@comment"/>]
+                    (<xsl:value-of select="@comment"/>)
                   </xsl:if>
                 </li>
               </xsl:for-each>
@@ -181,13 +181,17 @@
 
           <!-- Comment -->
           <xsl:if test="@comment">
-            <span d:priority="2">Comment: <xsl:value-of select="@comment"/><br/></span>
+            <span d:priority="2">
+              Comment: <xsl:value-of select="@comment"/>
+              <br/>
+            </span>
           </xsl:if>
 
           <!-- Pronunciations -->
           <xsl:if test="phonetic/@value">
             <xsl:for-each select="phonetic">
-              <span>Pronunciation:
+              <span>
+                Pronunciation:
                 [<xsl:call-template name="pronunciation">
                     <xsl:with-param name="text" select="@value"/>
                 </xsl:call-template>]
@@ -198,7 +202,8 @@
 
           <!-- Word class -->
           <xsl:if test="@class">
-            <span d:priority="2">Word class:
+            <span d:priority="2">
+              Word class:
               <xsl:choose>
                 <xsl:when test="@class='nn'">substantiv</xsl:when>
                 <xsl:when test="@class='jj'">adjektiv</xsl:when>
@@ -217,7 +222,8 @@
 
           <!-- Synonyms -->
           <xsl:if test="synonym/@value">
-            <span d:priority="2">Synonyms:
+            <span d:priority="2">
+              Synonyms:
               <xsl:for-each select="synonym">
                 <xsl:value-of select="@value"/>,
               </xsl:for-each>
@@ -227,7 +233,8 @@
 
           <!-- Inflections -->
           <xsl:if test="paradigm/inflection/@value">
-            <span d:priority="2">Inflections:
+            <span d:priority="2">
+              Inflections:
               <xsl:for-each select="paradigm/inflection">
                 <xsl:value-of select="@value"/>,
               </xsl:for-each>
@@ -238,21 +245,25 @@
           <!-- Definitions -->
           <xsl:if test="definition/@value">
             <xsl:for-each select="definition">
-              <span>Definition: <xsl:value-of select="@value"/></span>
-              <xsl:if test="translation/@value">
-                <span> (<xsl:value-of select="translation/@value"/>)</span>
-              </xsl:if>
-              <br/>
+              <span d:priority="2">
+                Definition: <xsl:value-of select="@value"/>
+                <xsl:if test="translation/@value">
+                  (<xsl:value-of select="translation/@value"/>)
+                </xsl:if>
+                <br/>
+              </span>
             </xsl:for-each>
           </xsl:if>
 
           <!-- Examples -->
           <xsl:if test="example/@value">
             <xsl:for-each select="example">
-              <span>Example: <xsl:value-of select="@value"/></span>
-              <xsl:if test="translation/@value">
-                <span> (<xsl:value-of select="translation/@value"/>)</span>
-              </xsl:if>
+              <span d:priority="2">
+                Example: <xsl:value-of select="@value"/>
+                <xsl:if test="translation/@value">
+                  (<xsl:value-of select="translation/@value"/>)
+                </xsl:if>
+              </span>
               <br/>
             </xsl:for-each>
           </xsl:if>
@@ -260,7 +271,8 @@
           <!-- Idioms -->
           <xsl:if test="idiom/@value">
             <xsl:for-each select="idiom">
-              <span d:priority="2">Idiom: <xsl:value-of select="@value"/>
+              <span d:priority="2">
+                Idiom: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
@@ -272,7 +284,8 @@
           <!-- Derivations -->
           <xsl:if test="derivation/@value">
             <xsl:for-each select="derivation">
-              <span d:priority="2">Derivation: <xsl:value-of select="@value"/>
+              <span d:priority="2">
+                Derivation: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
@@ -284,7 +297,8 @@
           <!-- Compounds -->
           <xsl:if test="compound/@value">
             <xsl:for-each select="compound">
-              <span d:priority="2">Compound: <xsl:value-of select="@value"/>
+              <span d:priority="2">
+                Compound: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
@@ -296,7 +310,8 @@
           <!-- Explanations -->
           <xsl:if test="explanation/@value">
             <xsl:for-each select="explanation">
-              <span d:priority="2">Explanation: <xsl:value-of select="@value"/>
+              <span d:priority="2">
+                Explanation: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
