@@ -9,6 +9,8 @@ DDK_DIR ?= "Dictionary Development Kit"
 DDK_BIN = "$(DDK_DIR)/bin"
 OBJECTS = objects
 
+DICTIONARY = $(OBJECTS)/$(NAME).dictionary
+
 INSTALL_DIR ?= ~/Library/Dictionaries
 
 all: fetch convert build
@@ -17,7 +19,7 @@ fetch: folkets_en_sv_public.xml folkets_sv_en_public.xml
 
 convert: $(XML)
 
-build: $(PLIST)
+build: $(DICTIONARY)
 
 folkets_%_public.xml:
 	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
@@ -29,8 +31,8 @@ $(XML): folkets_sv_en_public.xml folkets_en_sv_public.xml
 	sed 's/\&amp;/\&/g' $@ > $@_tmp
 	mv $@_tmp $@
 
-$(PLIST): $(XML)
-	"$(DDK_BIN)/build_dict.sh" $(NAME) $(XML) $(CSS) $(PLIST)
+$(DICTIONARY): $(XML) $(CSS) $(PLIST)
+	"$(DDK_BIN)/build_dict.sh" $(NAME) $^
 
 install:
 	@echo "Installing the dictionary into $(INSTALL_DIR)..."
