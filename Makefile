@@ -1,4 +1,4 @@
-NAME = "Svensk-English"
+NAME = Svensk-English
 
 XML = MacFolket.xml
 CSS = MacFolket.css
@@ -9,7 +9,7 @@ DDK_DIR ?= "Dictionary Development Kit"
 DDK_BIN = "$(DDK_DIR)/bin"
 OBJECTS = objects
 
-DICTIONARY = $(OBJECTS)/$(NAME).dictionary
+TARGET = $(OBJECTS)/$(NAME).dictionary
 
 INSTALL_DIR ?= ~/Library/Dictionaries
 
@@ -19,7 +19,7 @@ fetch: folkets_en_sv_public.xml folkets_sv_en_public.xml
 
 convert: $(XML)
 
-build: $(DICTIONARY)
+build: $(TARGET)
 
 folkets_%_public.xml:
 	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
@@ -31,19 +31,18 @@ $(XML): folkets_sv_en_public.xml folkets_en_sv_public.xml
 	sed 's/\&amp;/\&/g' $@ > $@_tmp
 	mv $@_tmp $@
 
-$(DICTIONARY): $(XML) $(CSS) $(PLIST)
+$(TARGET): $(XML) $(CSS) $(PLIST)
 	"$(DDK_BIN)/build_dict.sh" $(NAME) $^
+	touch $(TARGET)
 
-install:
+install: $(TARGET)
 	@echo "Installing the dictionary into $(INSTALL_DIR)..."
 	mkdir -p $(INSTALL_DIR)
-	ditto --noextattr --norsrc $(OBJECTS)/$(NAME).dictionary $(INSTALL_DIR)/$(NAME).dictionary
-	touch $(INSTALL_DIR)
+	ditto --noextattr --norsrc $(TARGET) $(INSTALL_DIR)/$(NAME).dictionary
 
 uninstall:
 	@echo "Uninstalling the dictionary from $(INSTALL_DIR)..."
 	rm -rf $(INSTALL_DIR)/$(NAME).dictionary
-	touch $(INSTALL_DIR)
 
 clean:
 	rm -rf $(OBJECTS)
