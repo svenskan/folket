@@ -24,7 +24,7 @@ build: $(TARGET)
 folkets_%_public.xml:
 	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
 
-$(XML): folkets_sv_en_public.xml folkets_en_sv_public.xml
+$(XML): folkets_sv_en_public.xml folkets_en_sv_public.xml $(XSL)
 	sed '$$ d' folkets_sv_en_public.xml > $@_tmp
 	tail -n +3 folkets_en_sv_public.xml >> $@_tmp
 	xsltproc -o $@ $(XSL) $@_tmp
