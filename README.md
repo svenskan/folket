@@ -1,6 +1,6 @@
-# MacFolket (February 7, 2016)
+# Folket (February 7, 2016)
 
-MacFolket is a Swedish–English dictionary for OS X.
+Folket is a Swedish–English dictionary for OS X.
 
 ## Installation
 
@@ -25,7 +25,7 @@ MacFolket is a Swedish–English dictionary for OS X.
 The repository is a fork of [MacFolket][macfolket], which is developed by
 [Christopher Loessl][loessl].
 
-[download]: https://github.com/IvanUkhov/MacFolket/raw/gh-pages/MacFolket.zip
+[download]: https://github.com/IvanUkhov/Folket/raw/gh-pages/Folket.zip
 [apple]: https://developer.apple.com/downloads
 [macfolket]: https://github.com/hashier/MacFolket
 [loessl]: http://loessl.org

@@ -317,11 +317,17 @@
       <d:entry id="front_back_matter" d:title="Front/Back Matter">
 <h1>Swedish–English</h1>
 <p>
-  Dictionary from Swedish to English and English to Swedish. With the dataset
-  from <a href="http://folkets-lexikon.csc.kth.se/folkets/">Folkets lexikon</a>.
+  Dictionary from Swedish to English and English to Swedish with the dataset
+  from <a href="http://folkets-lexikon.csc.kth.se/folkets">Folkets lexikon</a>.
 </p>
-<p>Author: <a href="http://loessl.org">Christopher Loessl</a></p>
-<p>Version: 2.0 (2016-02-07)</p>
+<p>
+  Authors:
+  <a href="http://loessl.org">Christopher Loessl</a> and
+  <a href="https://github.com/IvanUkhov">Ivan Ukhov</a>
+</p>
+<p>
+  Version: 2.0 (2016-02-07)
+</p>
 
 <h2>Usage</h2>
 <ul>
@@ -337,14 +343,12 @@
   <a href="folkets_sv_en_public.xml">Swedish-English</a> dictionaries can be
   downloaded for use under the terms of the
   <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons
-  Attribution-Share Alike 2.5 Generic license</a>.
+  Attribution-Share Alike 2.5 Generic</a> license.
 </p>
 
 <p>
-  The source code to build this dictionary can be found
-  <a href="http://hashier.github.com/MacFolket/">here</a>.
-  Christopher Loessl’s homepage can be found at
-  <a href="http://loessl.org">http://loessl.org</a>.
+  The source code to build this dictionary can be found at
+  <a href="https://IvanUkhov.github.com/Folket">GitHub</a>.
 </p>
         <xsl:text>
         </xsl:text>
