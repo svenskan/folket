@@ -1,4 +1,4 @@
-NAME = Svensk-English
+NAME = Swedish-English
 
 XML = dictionary.xml
 CSS = dictionary.css
