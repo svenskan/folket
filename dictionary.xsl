@@ -200,15 +200,15 @@
           <xsl:if test="@class">
             <span d:priority="2">Word class:
               <xsl:choose>
-                <xsl:when test="@class = 'nn'">substantiv</xsl:when>
-                <xsl:when test="@class = 'jj'">adjektiv</xsl:when>
-                <xsl:when test="@class = 'vb'">verb</xsl:when>
-                <xsl:when test="@class = 'in'">interjektion</xsl:when>
-                <xsl:when test="@class = 'pp'">preposition</xsl:when>
-                <xsl:when test="@class = 'pn'">pronomen</xsl:when>
-                <xsl:when test="@class = 'abbrev'">förkortning</xsl:when>
-                <xsl:when test="@class = 'ab'">adverb</xsl:when>
-                <xsl:when test="@class = 'rg'">grundtal</xsl:when>
+                <xsl:when test="@class='nn'">substantiv</xsl:when>
+                <xsl:when test="@class='jj'">adjektiv</xsl:when>
+                <xsl:when test="@class='vb'">verb</xsl:when>
+                <xsl:when test="@class='in'">interjektion</xsl:when>
+                <xsl:when test="@class='pp'">preposition</xsl:when>
+                <xsl:when test="@class='pn'">pronomen</xsl:when>
+                <xsl:when test="@class='abbrev'">förkortning</xsl:when>
+                <xsl:when test="@class='ab'">adverb</xsl:when>
+                <xsl:when test="@class='rg'">grundtal</xsl:when>
                 <xsl:otherwise></xsl:otherwise>
               </xsl:choose>
               <br/>
@@ -317,7 +317,7 @@
       <d:entry id="front_back_matter" d:title="Front/Back Matter">
 <h1>Swedish–English</h1>
 <p>
-  Dictionary from Swedish to English and English to Swedish with the dataset
+  Dictionary from Swedish to English and English to Swedish with the database
   from <a href="http://folkets-lexikon.csc.kth.se/folkets">Folkets lexikon</a>.
 </p>
 <p>
