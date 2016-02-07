@@ -5,7 +5,8 @@ MacFolket is a Swedish–English dictionary for OS X.
 ## Installation
 
 1. [Download][download] an archive with the latest version of the dictionary.
-2. Unzip the archive and install MacFolket.pkg found in the archive.
+2. Unzip the archive and copy `Swedish-English.dictionary` to
+   `~/Library/Dictionaries`.
 3. Open the Dictionary application and activate the Swedish–English dictionary
    in the settings.
 
@@ -24,6 +25,6 @@ MacFolket is a Swedish–English dictionary for OS X.
 Special thanks go to Philipp Brauner, who built an [English–German][german]
 dictionary and inspired to development of this English–Swedish dictionary.
 
-[download]: https://github.com/hashier/MacFolket/releases/download/v1.2/MacFolket-2014-03-23-v1.2.pkg.zip
+[download]: https://github.com/IvanUkhov/MacFolket/raw/gh-pages/MacFolket.zip
 [apple]: https://developer.apple.com/downloads
 [german]: http://lipflip.org/articles/dictcc-dictionary-plugin
