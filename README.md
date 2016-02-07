@@ -1,53 +1,29 @@
 # MacFolket
 
-A Swedish - English dictionary for Mac OS X which is nicely integrated into the system.
+A Swedish–English dictionary for OS X.
 
-### **[Download Version v1.2](https://github.com/hashier/MacFolket/releases/download/v1.2/MacFolket-2014-03-23-v1.2.pkg.zip)**
+## Installation
 
+1. [Download][download] an archive with the latest version of the dictionary.
+2. Unzip the archive and install MacFolket.pkg found in the archive.
+3. Open the Dictionary application and activate the Swedish–English dictionary
+   in the settings.
 
-## Installation guide
+## Compilation
 
-1. Download the zip file from above
-2. Unzip the file
-3. Install the .pkg file (Ctrl click on the .pkg file and chose "open")
-4. Open the dictionary app and activate the Swedish - English dictionary in the settings
+1. Clone the repository.
+2. Download Apple’s [Dictionary Development Kit][apple], which is a part of the
+   package called “Auxiliary Tools for Xcode.”
+3. Move the “Dictionary Development Kit” directory from the package to the
+   directory of the repository.
+4. Run `make`.
+5. Run `make install`.
 
-You can see a vieo of the installation process below.
+## Acknowledgments
 
-**If you run into problems while opening the .pkg file like this:**
+Special thanks go to Philipp Brauner, who built an [English–German][german]
+dictionary and inspired to development of this English–Swedish dictionary.
 
-![Undef](https://github.com/hashier/MacFolket/raw/master/images/undef.png)
-
-You can work around this problem by right clicking or Ctrl+clicking on the .pkg file and select "Open" from the context menu. On [imore](http://www.imore.com/how-open-apps-unidentified-developer-os-x-mountain-lion) you can find pictures how to do it and even a second way.
-
-
-## Screenshot
-
-![Screenshot](https://github.com/hashier/MacFolket/raw/master/images/svendict.jpg)
-
-
-## Video
-
-[![Video](http://img.youtube.com/vi/gWR_BvioaVw/0.jpg)](http://youtu.be/gWR_BvioaVw "This video shows the installation")
-
-
-## Building
-
-- Clone this git repository
-- Download Apples [Dictionary Development Kit](https://developer.apple.com/downloads/) (The packages is called "Auxiliary Tools for Xcode")
-- Copy the "Dictionary Development Kit" somewhere and adjust the Makefile accordingly
-- make
-- Optional make validate (you need to install jing for that)
-- make install
-
-
-## Caveats
-
-- Only the first entry is displayed in pop-up mode instead of all (e.g. "boken" shows only "beech") but you will see all of them in dictionary.app.
-
-
-## Thanks to
-
-Philipp Brauner who build an English <-> German dictionary which I have used now for a couple of years. His plugin gave me the idea to build an English <-> Swedish one.
-Here you can find his English <-> German one: http://lipflip.org/articles/dictcc-dictionary-plugin.
-
+[download]: https://github.com/hashier/MacFolket/releases/download/v1.2/MacFolket-2014-03-23-v1.2.pkg.zip
+[apple]: https://developer.apple.com/downloads
+[german]: http://lipflip.org/articles/dictcc-dictionary-plugin
