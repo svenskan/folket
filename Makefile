@@ -1,9 +1,9 @@
 NAME = Svensk-English
 
-XML = MacFolket.xml
-CSS = MacFolket.css
-XSL = MacFolket.xsl
-PLIST = MacFolket.plist
+XML = dictionary.xml
+CSS = dictionary.css
+XSL = dictionary.xsl
+PLIST = dictionary.plist
 
 DDK_DIR ?= "Dictionary Development Kit"
 DDK_BIN = "$(DDK_DIR)/bin"
