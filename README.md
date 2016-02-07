@@ -22,9 +22,10 @@ MacFolket is a Swedish–English dictionary for OS X.
 
 ## Acknowledgments
 
-Special thanks go to Philipp Brauner, who built an [English–German][german]
-dictionary and inspired to development of this English–Swedish dictionary.
+The repository is a fork of [MacFolket][macfolket], which is developed by
+[Christopher Loessl][loessl].
 
 [download]: https://github.com/IvanUkhov/MacFolket/raw/gh-pages/MacFolket.zip
 [apple]: https://developer.apple.com/downloads
-[german]: http://lipflip.org/articles/dictcc-dictionary-plugin
+[macfolket]: https://github.com/hashier/MacFolket
+[loessl]: http://loessl.org
