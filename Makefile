@@ -38,7 +38,8 @@ $(TARGET): $(XML) $(CSS) $(PLIST)
 install: $(TARGET)
 	@echo "Installing the dictionary into $(INSTALL_DIR)..."
 	mkdir -p $(INSTALL_DIR)
-	ditto --noextattr --norsrc $(TARGET) $(INSTALL_DIR)/$(NAME).dictionary
+	rm -rf $(INSTALL_DIR)/$(NAME).dictionary
+	cp -R $(TARGET) $(INSTALL_DIR)/$(NAME).dictionary
 
 uninstall:
 	@echo "Uninstalling the dictionary from $(INSTALL_DIR)..."
