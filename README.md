@@ -1,4 +1,4 @@
-# MacFolket
+# MacFolket (February 7, 2016)
 
 MacFolket is a Swedish–English dictionary for OS X.
 
