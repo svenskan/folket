@@ -8,12 +8,12 @@
     <xsl:param name="from"/>
     <xsl:param name="into"/>
     <xsl:choose>
-      <xsl:when test="contains($text,$from)">
-        <xsl:value-of select="substring-before($text,$from)"/>
+      <xsl:when test="contains($text, $from)">
+        <xsl:value-of select="substring-before($text, $from)"/>
         <xsl:value-of select="$into"/>
         <xsl:call-template name="replace">
           <xsl:with-param name="text"
-            select="substring-after($text,$from)"/>
+            select="substring-after($text, $from)"/>
           <xsl:with-param name="from" select="$from"/>
           <xsl:with-param name="into" select="$into"/>
         </xsl:call-template>
@@ -225,7 +225,7 @@
             <span d:priority="2">
               Synonyms:
               <xsl:for-each select="synonym">
-                <xsl:value-of select="@value"/>,
+                <xsl:value-of select="@value"/><xsl:if test="position() != last()">, </xsl:if>
               </xsl:for-each>
               <br/>
             </span>
@@ -236,7 +236,7 @@
             <span d:priority="2">
               Inflections:
               <xsl:for-each select="paradigm/inflection">
-                <xsl:value-of select="@value"/>,
+                <xsl:value-of select="@value"/><xsl:if test="position() != last()">, </xsl:if>
               </xsl:for-each>
               <br/>
             </span>
