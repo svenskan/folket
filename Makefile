@@ -7,9 +7,10 @@ PLIST = dictionary.plist
 
 DDK_DIR ?= "Dictionary Development Kit"
 DDK_BIN = "$(DDK_DIR)/bin"
-OBJECTS = objects
+BUILD = build
 
-TARGET = $(OBJECTS)/$(NAME).dictionary
+FILE = $(NAME).dictionary
+TARGET = $(BUILD)/$(FILE)
 
 INSTALL_DIR ?= ~/Library/Dictionaries
 
@@ -20,6 +21,15 @@ fetch: folkets_en_sv_public.xml folkets_sv_en_public.xml
 convert: $(XML)
 
 build: $(TARGET)
+
+publish: $(TARGET)
+	cd $(BUILD) && zip -r $(NAME).zip $(FILE)
+	git checkout gh-pages
+	mv $(BUILD)/$(NAME).zip Folket.zip
+	git add Folket.zip
+	git commit --amend --message 'Update the archive'
+	git push --force
+	git checkout master
 
 folkets_%_public.xml:
 	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
@@ -38,15 +48,15 @@ $(TARGET): $(XML) $(CSS) $(PLIST)
 install: $(TARGET)
 	@echo "Installing the dictionary into $(INSTALL_DIR)..."
 	mkdir -p $(INSTALL_DIR)
-	rm -rf $(INSTALL_DIR)/$(NAME).dictionary
-	cp -R $(TARGET) $(INSTALL_DIR)/$(NAME).dictionary
+	rm -rf $(INSTALL_DIR)/$(FILE)
+	cp -R $(TARGET) $(INSTALL_DIR)/$(FILE)
 
 uninstall:
 	@echo "Uninstalling the dictionary from $(INSTALL_DIR)..."
-	rm -rf $(INSTALL_DIR)/$(NAME).dictionary
+	rm -rf $(INSTALL_DIR)/$(FILE)
 
 clean:
-	rm -rf $(OBJECTS)
+	rm -rf $(BUILD)
 	rm -rf *.xml
 
 .PHONY: all fetch convert build install uninstall clean
