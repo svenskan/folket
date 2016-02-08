@@ -332,8 +332,10 @@
       <d:entry id="front_back_matter" d:title="Front/Back Matter">
 <h1>Swedish–English</h1>
 <p>
-  Dictionary from Swedish to English and English to Swedish with the database
-  from <a href="http://folkets-lexikon.csc.kth.se/folkets">Folkets lexikon</a>.
+  Dictionary from Swedish to English and from English to Swedish with the
+  database from the
+  <a href="http://folkets-lexikon.csc.kth.se/folkets/folkets.en.html">People’s
+  Dictionary</a>.
 </p>
 <p>
   Authors:
@@ -341,29 +343,28 @@
   <a href="https://github.com/IvanUkhov">Ivan Ukhov</a>
 </p>
 <p>
-  Version: 2.0 (2016-02-07)
+  Version: 2.0 (2016-02-08)
 </p>
 
 <h2>Usage</h2>
 <ul>
-  <li>Tap a word with three fingers on the touchpad.</li>
+  <li>Tap a word with three fingers on the trackpad.</li>
   <li>Hover the cursor over a word and press Command-Control-D.</li>
-  <li>Open the Dictionary application.</li>
+  <li>Open the Dictionary app and type a work.</li>
 </ul>
 
 <h2>License</h2>
 <p>
-  The People’s Dictionary is free. Both the
-  <a href="folkets_en_sv_public.xml">English-Swedish</a> and
-  <a href="folkets_sv_en_public.xml">Swedish-English</a> dictionaries can be
-  downloaded for use under the terms of the
-  <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons
-  Attribution-Share Alike 2.5 Generic</a> license.
-</p>
-
-<p>
-  The source code to build this dictionary can be found at
-  <a href="https://IvanUkhov.github.com/Folket">GitHub</a>.
+  Folket is based on the
+  <a href="http://folkets-lexikon.csc.kth.se/folkets/folkets.en.html">People’s
+  Dictionary</a>. The People’s Dictionary is free. Both the English–Swedish
+  dictionary and Swedish–English dictionary can be
+  <a href="http://folkets-lexikon.csc.kth.se/folkets/om.en.html">downloaded</a>
+  for use under the terms of the
+  <a href="http://creativecommons.org/licenses/by-sa/2.5">Distributed Creative
+  Commons Attribution-Share Alike 2.5 Generic</a> license. The source code of
+  this dictionary can be found at
+  <a href="https://github.com/IvanUkhov/Folket">GitHub</a>.
 </p>
         <xsl:text>
         </xsl:text>

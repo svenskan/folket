@@ -5,54 +5,22 @@
 <dict>
   <key>CFBundleDevelopmentRegion</key>
   <string>English</string>
+
   <key>CFBundleIdentifier</key>
-  <string>org.loessl.dictionary.sven</string>
+  <string>org.loessl.dictionary.Folket</string>
+
   <key>CFBundleName</key>
-  <string>SV-EN</string>
+  <string>Folket</string>
+
   <key>CFBundleShortVersionString</key>
-  <string>0.4.7</string>
+  <string>2.0.0</string>
+
   <key>DCSDictionaryCopyright</key>
-  <string>
-    <![CDATA[
-<h1>Swedish–English</h1>
-<p>
-  Dictionary from Swedish to English and English to Swedish with the database
-  from <a href="http://folkets-lexikon.csc.kth.se/folkets">Folkets lexikon</a>.
-</p>
-<p>
-  Authors:
-  <a href="http://loessl.org">Christopher Loessl</a> and
-  <a href="https://github.com/IvanUkhov">Ivan Ukhov</a>
-</p>
-<p>
-  Version: 2.0 (2016-02-07)
-</p>
+  <string>© 2012–2016 Christopher Loessl and Ivan Ukhov</string>
 
-<h2>Usage</h2>
-<ul>
-  <li>Tap a word with three fingers on the touchpad.</li>
-  <li>Hover the cursor over a word and press Command-Control-D.</li>
-  <li>Open the Dictionary application.</li>
-</ul>
-
-<h2>License</h2>
-<p>
-  The People’s Dictionary is free. Both the
-  <a href="folkets_en_sv_public.xml">English-Swedish</a> and
-  <a href="folkets_sv_en_public.xml">Swedish-English</a> dictionaries can be
-  downloaded for use under the terms of the
-  <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons
-  Attribution-Share Alike 2.5 Generic</a> license.
-</p>
-
-<p>
-  The source code to build this dictionary can be found at
-  <a href="https://IvanUkhov.github.com/Folket">GitHub</a>.
-</p>
-    ]]>
-  </string>
   <key>DCSDictionaryManufacturerName</key>
   <string>Christopher Loessl and Ivan Ukhov</string>
+
   <key>DCSDictionaryFrontMatterReferenceID</key>
   <string>front_back_matter</string>
 </dict>
