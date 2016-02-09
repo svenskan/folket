@@ -7,7 +7,7 @@ PLIST = dictionary.plist
 
 DDK_DIR ?= "Dictionary Development Kit"
 DDK_BIN = "$(DDK_DIR)/bin"
-BUILD = build
+BUILD = objects
 
 FILE = $(NAME).dictionary
 TARGET = $(BUILD)/$(FILE)
