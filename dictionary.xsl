@@ -364,7 +364,7 @@
   <a href="http://creativecommons.org/licenses/by-sa/2.5">Distributed Creative
   Commons Attribution-Share Alike 2.5 Generic</a> license. The source code of
   this dictionary can be found at
-  <a href="https://github.com/IvanUkhov/Folket">GitHub</a>.
+  <a href="https://github.com/svenskan/folket">GitHub</a>.
 </p>
         <xsl:text>
         </xsl:text>
