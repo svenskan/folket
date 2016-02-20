@@ -1,4 +1,4 @@
-# Folket (February 8, 2016)
+# Folket (February 20, 2016)
 
 Folket is a Swedish–English dictionary for OS X.
 
