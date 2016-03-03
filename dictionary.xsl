@@ -343,13 +343,13 @@
   <a href="https://github.com/IvanUkhov">Ivan Ukhov</a>
 </p>
 <p>
-  Version: 2.0 (2016-02-08)
+  Version: 2.0 (2016-03-03)
 </p>
 
 <h2>Usage</h2>
 <ul>
   <li>Tap a word with three fingers on the trackpad.</li>
-  <li>Hover the cursor over a word and press Command-Control-D.</li>
+  <li>Hover the cursor over a word and press ⌃⌘D.</li>
   <li>Open the Dictionary app and type a work.</li>
 </ul>
 

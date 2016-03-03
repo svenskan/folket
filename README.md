@@ -13,7 +13,7 @@ Folket is a Swedish–English dictionary for OS X.
 ## Usage
 
 * Tap a word with three fingers on the trackpad.
-* Hover the cursor over a word and press Command-Control-D.
+* Hover the cursor over a word and press ⌃⌘D.
 * Open the Dictionary app and type a word.
 
 ## Compilation
