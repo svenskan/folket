@@ -1,18 +1,37 @@
 @charset "utf-8";
 @namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
 
+* {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1em;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: -apple-system, 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+
+  padding: 1em;
+}
+
+.entry {
+  display: block;
+  margin-bottom: 1.5em;
 }
 
 h1 {
+  font-size: 200%;
   font-weight: 300;
 }
 
 .pronunciation {
   color: #666;
   font-size: 75%;
-  font-weight: normal;
+
   margin-left: 0.25em;
 }
 
@@ -22,4 +41,19 @@ h1 {
 
 .pronunciation::after {
   content: "]";
+}
+
+.part-of-speech {
+  font-size: 50%;
+  line-height: 1.4em;
+
+  display: block;
+}
+
+ul {
+  margin: 0.5em 0 0.5em 2em;
+}
+
+p, ul li {
+  line-height: 1.4em;
 }

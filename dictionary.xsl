@@ -131,36 +131,24 @@
 
   <xsl:template match="/">
     <d:dictionary xmlns="http://www.w3.org/1999/xhtml" xmlns:d="http://www.apple.com/DTDs/DictionaryService-1.0.rng">
-      <xsl:text>
-      </xsl:text>
       <xsl:for-each select="dictionary/word">
-        <d:entry>
+        <d:entry class="entry">
           <xsl:attribute name="id">id_<xsl:number value="position()"/></xsl:attribute>
           <xsl:attribute name="d:title"><xsl:value-of select="@value"/></xsl:attribute>
-
-          <xsl:text>
-          </xsl:text>
 
           <!-- Make sure that the actual word has an index entry -->
           <d:index d:value="{@value}"></d:index>
 
           <!-- Add all inflections to the search index so we will be able to -->
-          <!-- find bil even so we search for bilen. -->
+          <!-- find bil even so we search for bilen -->
           <xsl:for-each select="paradigm/inflection">
-            <xsl:text>
-            </xsl:text>
             <d:index d:value="{@value}"></d:index>
           </xsl:for-each>
 
-          <!-- Add all the translations to the search index as well. -->
+          <!-- Add all the translations to the search index as well -->
           <xsl:for-each select="translation[@value!='']">
-            <xsl:text>
-            </xsl:text>
             <d:index d:value="{@value}"></d:index>
           </xsl:for-each>
-
-          <xsl:text>
-          </xsl:text>
 
           <!-- Header -->
           <h1>
@@ -176,11 +164,29 @@
                 </span>
               </xsl:for-each>
             </xsl:if>
+
+            <!-- Part of speech -->
+            <xsl:if test="@class != ''">
+              <span class="part-of-speech" d:priority="2">
+                <xsl:choose>
+                  <xsl:when test="@class='nn'">substantiv</xsl:when>
+                  <xsl:when test="@class='jj'">adjektiv</xsl:when>
+                  <xsl:when test="@class='vb'">verb</xsl:when>
+                  <xsl:when test="@class='in'">interjektion</xsl:when>
+                  <xsl:when test="@class='pp'">preposition</xsl:when>
+                  <xsl:when test="@class='pn'">pronomen</xsl:when>
+                  <xsl:when test="@class='abbrev'">förkortning</xsl:when>
+                  <xsl:when test="@class='ab'">adverb</xsl:when>
+                  <xsl:when test="@class='rg'">grundtal</xsl:when>
+                  <xsl:otherwise></xsl:otherwise>
+                </xsl:choose>
+              </span>
+            </xsl:if>
           </h1>
 
           <!-- Translations -->
           <xsl:if test="translation/@value">
-            <ol>
+            <ul class="translations">
               <xsl:for-each select="translation">
                 <li>
                   <xsl:value-of select="@value"/>
@@ -189,143 +195,108 @@
                   </xsl:if>
                 </li>
               </xsl:for-each>
-            </ol>
+            </ul>
           </xsl:if>
 
           <!-- Comment -->
           <xsl:if test="@comment">
-            <span d:priority="2">
+            <p d:priority="2">
               Comment: <xsl:value-of select="@comment"/>
-              <br/>
-            </span>
-          </xsl:if>
-
-          <!-- Part of speech -->
-          <xsl:if test="@class != ''">
-            <span d:priority="2">
-              Part of speech:
-              <xsl:choose>
-                <xsl:when test="@class='nn'">substantiv</xsl:when>
-                <xsl:when test="@class='jj'">adjektiv</xsl:when>
-                <xsl:when test="@class='vb'">verb</xsl:when>
-                <xsl:when test="@class='in'">interjektion</xsl:when>
-                <xsl:when test="@class='pp'">preposition</xsl:when>
-                <xsl:when test="@class='pn'">pronomen</xsl:when>
-                <xsl:when test="@class='abbrev'">förkortning</xsl:when>
-                <xsl:when test="@class='ab'">adverb</xsl:when>
-                <xsl:when test="@class='rg'">grundtal</xsl:when>
-                <xsl:otherwise></xsl:otherwise>
-              </xsl:choose>
-              <br/>
-            </span>
+            </p>
           </xsl:if>
 
           <!-- Synonyms -->
           <xsl:if test="synonym/@value">
-            <span d:priority="2">
+            <p d:priority="2">
               Synonyms:
               <xsl:for-each select="synonym">
                 <xsl:value-of select="@value"/><xsl:if test="position() != last()">, </xsl:if>
               </xsl:for-each>
-              <br/>
-            </span>
+            </p>
           </xsl:if>
 
           <!-- Inflections -->
           <xsl:if test="paradigm/inflection/@value">
-            <span d:priority="2">
+            <p d:priority="2">
               Inflections:
               <xsl:for-each select="paradigm/inflection">
                 <xsl:value-of select="@value"/><xsl:if test="position() != last()">, </xsl:if>
               </xsl:for-each>
-              <br/>
-            </span>
+            </p>
           </xsl:if>
 
           <!-- Definitions -->
           <xsl:if test="definition/@value">
             <xsl:for-each select="definition">
-              <span d:priority="2">
+              <p d:priority="2">
                 Definition: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
-                <br/>
-              </span>
+              </p>
             </xsl:for-each>
           </xsl:if>
 
           <!-- Examples -->
           <xsl:if test="example/@value">
             <xsl:for-each select="example">
-              <span d:priority="2">
+              <p d:priority="2">
                 Example: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
-              </span>
-              <br/>
+              </p>
             </xsl:for-each>
           </xsl:if>
 
           <!-- Idioms -->
           <xsl:if test="idiom/@value">
             <xsl:for-each select="idiom">
-              <span d:priority="2">
+              <p d:priority="2">
                 Idiom: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
-                <br/>
-              </span>
+              </p>
             </xsl:for-each>
           </xsl:if>
 
           <!-- Derivations -->
           <xsl:if test="derivation/@value">
             <xsl:for-each select="derivation">
-              <span d:priority="2">
+              <p d:priority="2">
                 Derivation: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
-                <br/>
-              </span>
+              </p>
             </xsl:for-each>
           </xsl:if>
 
           <!-- Compounds -->
           <xsl:if test="compound/@value">
             <xsl:for-each select="compound">
-              <span d:priority="2">
+              <p d:priority="2">
                 Compound: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
-                <br/>
-              </span>
+              </p>
             </xsl:for-each>
           </xsl:if>
 
           <!-- Explanations -->
           <xsl:if test="explanation/@value">
             <xsl:for-each select="explanation">
-              <span d:priority="2">
+              <p d:priority="2">
                 Explanation: <xsl:value-of select="@value"/>
                 <xsl:if test="translation/@value">
                   (<xsl:value-of select="translation/@value"/>)
                 </xsl:if>
-                <br/>
-              </span>
+              </p>
             </xsl:for-each>
           </xsl:if>
-
-          <xsl:text>
-          </xsl:text>
         </d:entry>
-
-        <xsl:text>
-        </xsl:text>
       </xsl:for-each>
 
       <!-- Footer -->
@@ -343,7 +314,7 @@
   <a href="https://github.com/IvanUkhov">Ivan Ukhov</a>
 </p>
 <p>
-  Version: 2.0 (2016-03-03)
+  Version: 2.0
 </p>
 
 <h2>Usage</h2>
@@ -366,12 +337,7 @@
   this dictionary can be found at
   <a href="https://github.com/svenskan/folket">GitHub</a>.
 </p>
-        <xsl:text>
-        </xsl:text>
       </d:entry>
-
-      <xsl:text>
-      </xsl:text>
     </d:dictionary>
   </xsl:template>
 </xsl:stylesheet>
