@@ -61,12 +61,7 @@ p, ul li {
   line-height: 1.4em;
 }
 
-p span {
+.element ~ .element {
   display: block;
   margin-left: 2em;
-}
-
-p span:first-child {
-  display: inline;
-  margin-left: 0;
 }

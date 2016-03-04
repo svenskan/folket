@@ -230,7 +230,7 @@
             <p d:priority="2">
               Definition:
               <xsl:for-each select="definition">
-                <span>
+                <span class="element">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="translation/@value">
                     (<xsl:value-of select="translation/@value"/>)
@@ -245,7 +245,7 @@
             <p d:priority="2">
               Example:
               <xsl:for-each select="example">
-                <span>
+                <span class="element">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="translation/@value">
                     (<xsl:value-of select="translation/@value"/>)
@@ -260,7 +260,7 @@
             <p d:priority="2">
               Idiom:
               <xsl:for-each select="idiom">
-                <span>
+                <span class="element">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="translation/@value">
                     (<xsl:value-of select="translation/@value"/>)
@@ -275,7 +275,7 @@
             <p d:priority="2">
               Derivation:
               <xsl:for-each select="derivation">
-                <span>
+                <span class="element">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="translation/@value">
                     (<xsl:value-of select="translation/@value"/>)
@@ -290,7 +290,7 @@
             <p d:priority="2">
               Compound:
               <xsl:for-each select="compound">
-                <span>
+                <span class="element">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="translation/@value">
                     (<xsl:value-of select="translation/@value"/>)
@@ -305,7 +305,7 @@
             <p d:priority="2">
               Explanation:
               <xsl:for-each select="explanation">
-                <span>
+                <span class="element">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="translation/@value">
                     (<xsl:value-of select="translation/@value"/>)
