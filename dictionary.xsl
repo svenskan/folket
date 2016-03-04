@@ -200,10 +200,10 @@
             </xsl:for-each>
           </xsl:if>
 
-          <!-- Word class -->
+          <!-- Part of speech -->
           <xsl:if test="@class">
             <span d:priority="2">
-              Word class:
+              Part of speech:
               <xsl:choose>
                 <xsl:when test="@class='nn'">substantiv</xsl:when>
                 <xsl:when test="@class='jj'">adjektiv</xsl:when>
