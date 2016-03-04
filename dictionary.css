@@ -57,7 +57,7 @@ ul {
   margin: 0.75em 0 0.75em 2em;
 }
 
-p, ul li {
+p, li, .element {
   line-height: 1.4em;
 }
 
