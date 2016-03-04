@@ -164,25 +164,25 @@
                 </span>
               </xsl:for-each>
             </xsl:if>
-
-            <!-- Part of speech -->
-            <xsl:if test="@class != ''">
-              <span class="part-of-speech" d:priority="2">
-                <xsl:choose>
-                  <xsl:when test="@class='nn'">substantiv</xsl:when>
-                  <xsl:when test="@class='jj'">adjektiv</xsl:when>
-                  <xsl:when test="@class='vb'">verb</xsl:when>
-                  <xsl:when test="@class='in'">interjektion</xsl:when>
-                  <xsl:when test="@class='pp'">preposition</xsl:when>
-                  <xsl:when test="@class='pn'">pronomen</xsl:when>
-                  <xsl:when test="@class='abbrev'">förkortning</xsl:when>
-                  <xsl:when test="@class='ab'">adverb</xsl:when>
-                  <xsl:when test="@class='rg'">grundtal</xsl:when>
-                  <xsl:otherwise></xsl:otherwise>
-                </xsl:choose>
-              </span>
-            </xsl:if>
           </h1>
+
+          <!-- Part of speech -->
+          <xsl:if test="@class != ''">
+            <p class="part-of-speech" d:priority="2">
+              <xsl:choose>
+                <xsl:when test="@class='nn'">substantiv</xsl:when>
+                <xsl:when test="@class='jj'">adjektiv</xsl:when>
+                <xsl:when test="@class='vb'">verb</xsl:when>
+                <xsl:when test="@class='in'">interjektion</xsl:when>
+                <xsl:when test="@class='pp'">preposition</xsl:when>
+                <xsl:when test="@class='pn'">pronomen</xsl:when>
+                <xsl:when test="@class='abbrev'">förkortning</xsl:when>
+                <xsl:when test="@class='ab'">adverb</xsl:when>
+                <xsl:when test="@class='rg'">grundtal</xsl:when>
+                <xsl:otherwise></xsl:otherwise>
+              </xsl:choose>
+            </p>
+          </xsl:if>
 
           <!-- Translations -->
           <xsl:if test="translation/@value">
