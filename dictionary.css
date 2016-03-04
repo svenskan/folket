@@ -1,6 +1,14 @@
 @charset "utf-8";
 @namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
 
+body {
+  font-family: -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+}
+
 .pronunciation {
   color: #666;
   font-size: 75%;
