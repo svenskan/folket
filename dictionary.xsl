@@ -201,7 +201,7 @@
           </xsl:if>
 
           <!-- Part of speech -->
-          <xsl:if test="@class">
+          <xsl:if test="@class != ''">
             <span d:priority="2">
               Part of speech:
               <xsl:choose>
