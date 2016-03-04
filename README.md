@@ -2,6 +2,8 @@
 
 Folket is a Swedish–English dictionary for OS X.
 
+![Dictionary](screenshot.png)
+
 ## Installation
 
 1. [Download][archive] an archive with the latest version of the dictionary.
