@@ -1,2 +1,17 @@
 @charset "utf-8";
 @namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
+
+.pronunciation {
+  color: #666;
+  font-size: 75%;
+  font-weight: normal;
+  margin-left: 0.25em;
+}
+
+.pronunciation::before {
+  content: "[";
+}
+
+.pronunciation::after {
+  content: "]";
+}

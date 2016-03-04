@@ -163,7 +163,20 @@
           </xsl:text>
 
           <!-- Header -->
-          <h1><xsl:value-of select="@value"/></h1>
+          <h1>
+            <xsl:value-of select="@value"/>
+
+            <!-- Pronunciations -->
+            <xsl:if test="phonetic/@value">
+              <xsl:for-each select="phonetic">
+                <span class="pronunciation">
+                  <xsl:call-template name="pronunciation">
+                    <xsl:with-param name="text" select="@value"/>
+                  </xsl:call-template>
+                </span>
+              </xsl:for-each>
+            </xsl:if>
+          </h1>
 
           <!-- Translations -->
           <xsl:if test="translation/@value">
@@ -185,19 +198,6 @@
               Comment: <xsl:value-of select="@comment"/>
               <br/>
             </span>
-          </xsl:if>
-
-          <!-- Pronunciations -->
-          <xsl:if test="phonetic/@value">
-            <xsl:for-each select="phonetic">
-              <span>
-                Pronunciation:
-                [<xsl:call-template name="pronunciation">
-                    <xsl:with-param name="text" select="@value"/>
-                </xsl:call-template>]
-                <br/>
-              </span>
-            </xsl:for-each>
           </xsl:if>
 
           <!-- Part of speech -->
