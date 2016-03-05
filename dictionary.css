@@ -13,7 +13,7 @@
 body {
   font-family: -apple-system, 'Helvetica Neue', sans-serif;
   font-size: 16px;
-  line-height: 1em;
+  line-height: 1.4em;
   padding: 1em;
 }
 
@@ -45,6 +45,7 @@ h1 {
 }
 
 .part-of-speech {
+  color: #666;
   font-weight: 300;
   margin-bottom: 0.75em;
 }
@@ -53,11 +54,14 @@ h1 {
   margin: 0.75em 0 0.75em 2em;
 }
 
-p, .translations li, .part-of-speech, .element {
-  line-height: 1.4em;
-}
-
 .element ~ .element {
   display: block;
   margin-left: 2em;
+}
+
+p em {
+  color: #666;
+  font-style: normal;
+  font-weight: 300;
+  padding-right: 0.4em;
 }
