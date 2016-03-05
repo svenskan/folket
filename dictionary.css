@@ -22,10 +22,30 @@ body {
   margin-bottom: 1.5em;
 }
 
-h1 {
-  font-size: 200%;
+h1, h2 {
   font-weight: 300;
   line-height: 1em;
+  margin-bottom: 0.25em;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 150%;
+  margin-top: 0.75em;
+}
+
+ul {
+  margin: 0.75em 0 0.75em 2em;
+}
+
+p em {
+  color: #666;
+  font-style: normal;
+  font-weight: 300;
+  padding-right: 0.4em;
 }
 
 .pronunciation {
@@ -47,21 +67,11 @@ h1 {
 .part-of-speech {
   color: #666;
   font-weight: 300;
+  margin-top: -0.5em;
   margin-bottom: 0.75em;
-}
-
-.translations {
-  margin: 0.75em 0 0.75em 2em;
 }
 
 .element ~ .element {
   display: block;
   margin-left: 2em;
-}
-
-p em {
-  color: #666;
-  font-style: normal;
-  font-weight: 300;
-  padding-right: 0.4em;
 }

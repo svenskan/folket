@@ -30,10 +30,10 @@ Folket is a Swedish–English dictionary for OS X.
 
 ## License
 
-Folket is based on the [People’s Dictionary][folkets-index]. The People’s
-Dictionary is free. Both the English–Swedish dictionary and Swedish–English
-dictionary can be [downloaded][folkets-about] for use under the terms of the
-[Distributed Creative Commons Attribution-Share Alike 2.5 Generic][license]
+Folket is based on the [People’s Dictionary][folkets-index] (Folkets lexikon).
+The People’s Dictionary is free. Both the English–Swedish dictionary and
+Swedish–English dictionary can be [downloaded][folkets-about] for use under the
+terms of the [Creative Commons Attribution-Share Alike 2.5 Generic][license]
 license.
 
 ## Acknowledgments

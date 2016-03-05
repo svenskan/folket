@@ -320,20 +320,16 @@
 
       <!-- Footer -->
       <d:entry id="front_back_matter" d:title="Front/Back Matter">
-<h1>Swedish–English</h1>
+<h1>Folket</h1>
+<p>Folket is a Swedish–English dictionary for OS X.</p>
 <p>
-  Dictionary from Swedish to English and from English to Swedish with the
-  database from the
-  <a href="http://folkets-lexikon.csc.kth.se/folkets/folkets.en.html">People’s
-  Dictionary</a>.
-</p>
-<p>
-  Authors:
+  <em>Author:</em>
   <a href="http://loessl.org">Christopher Loessl</a> and
   <a href="https://github.com/IvanUkhov">Ivan Ukhov</a>
 </p>
 <p>
-  Version: 2.0
+  <em>Version:</em>
+  2.0
 </p>
 
 <h2>Usage</h2>
@@ -347,13 +343,13 @@
 <p>
   Folket is based on the
   <a href="http://folkets-lexikon.csc.kth.se/folkets/folkets.en.html">People’s
-  Dictionary</a>. The People’s Dictionary is free. Both the English–Swedish
-  dictionary and Swedish–English dictionary can be
+  Dictionary</a> (Folkets lexikon). The People’s Dictionary is free. Both the
+  English–Swedish dictionary and Swedish–English dictionary can be
   <a href="http://folkets-lexikon.csc.kth.se/folkets/om.en.html">downloaded</a>
   for use under the terms of the
-  <a href="http://creativecommons.org/licenses/by-sa/2.5">Distributed Creative
-  Commons Attribution-Share Alike 2.5 Generic</a> license. The source code of
-  this dictionary can be found at
+  <a href="http://creativecommons.org/licenses/by-sa/2.5">Creative Commons
+  Attribution-Share Alike 2.5 Generic</a> license. The source code of this
+  dictionary can be found on
   <a href="https://github.com/svenskan/folket">GitHub</a>.
 </p>
       </d:entry>
