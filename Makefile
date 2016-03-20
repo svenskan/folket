@@ -16,15 +16,6 @@ INSTALL_DIR ?= ~/Library/Dictionaries
 
 all: $(TARGET)
 
-publish: $(TARGET)
-	cd $(BUILD) && zip -r $(NAME).zip $(FILE)
-	git checkout gh-pages
-	mv $(BUILD)/$(NAME).zip Folket.zip
-	git add Folket.zip
-	git commit --amend --message 'Update the archive'
-	git push --force
-	git checkout master
-
 $(TARGET): $(XML) $(CSS) $(PLIST)
 	"$(DDK_BIN)/build_dict.sh" $(NAME) $^
 	touch $(TARGET)
@@ -48,6 +39,15 @@ install: $(TARGET)
 uninstall:
 	@echo "Uninstalling the dictionary from $(INSTALL_DIR)..."
 	rm -rf $(INSTALL_DIR)/$(FILE)
+
+publish: $(TARGET)
+	cd $(BUILD) && zip -r $(NAME).zip $(FILE)
+	git checkout gh-pages
+	mv $(BUILD)/$(NAME).zip Folket.zip
+	git add Folket.zip
+	git commit --amend --message 'Update the archive'
+	git push --force
+	git checkout master
 
 clean:
 	rm -rf $(BUILD)
