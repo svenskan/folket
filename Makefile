@@ -14,13 +14,7 @@ TARGET = $(BUILD)/$(FILE)
 
 INSTALL_DIR ?= ~/Library/Dictionaries
 
-all: fetch convert build
-
-fetch: folkets_en_sv_public.xml folkets_sv_en_public.xml
-
-convert: $(XML)
-
-build: $(TARGET)
+all: $(TARGET)
 
 publish: $(TARGET)
 	cd $(BUILD) && zip -r $(NAME).zip $(FILE)
@@ -31,8 +25,9 @@ publish: $(TARGET)
 	git push --force
 	git checkout master
 
-folkets_%_public.xml:
-	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
+$(TARGET): $(XML) $(CSS) $(PLIST)
+	"$(DDK_BIN)/build_dict.sh" $(NAME) $^
+	touch $(TARGET)
 
 $(XML): folkets_sv_en_public.xml folkets_en_sv_public.xml $(XSL)
 	sed '$$ d' folkets_sv_en_public.xml > $@_tmp
@@ -41,9 +36,8 @@ $(XML): folkets_sv_en_public.xml folkets_en_sv_public.xml $(XSL)
 	sed 's/\&amp;/\&/g' $@ > $@_tmp
 	mv $@_tmp $@
 
-$(TARGET): $(XML) $(CSS) $(PLIST)
-	"$(DDK_BIN)/build_dict.sh" $(NAME) $^
-	touch $(TARGET)
+folkets_%_public.xml:
+	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
 
 install: $(TARGET)
 	@echo "Installing the dictionary into $(INSTALL_DIR)..."
@@ -59,4 +53,4 @@ clean:
 	rm -rf $(BUILD)
 	rm -rf *.xml
 
-.PHONY: all fetch convert build install uninstall clean
+.PHONY: all install uninstall clean

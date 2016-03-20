@@ -25,8 +25,7 @@ Folket is a Swedish–English dictionary for OS X.
    package called “Auxiliary Tools for Xcode.”
 3. Move the “Dictionary Development Kit” directory from the package to the
    directory of the repository.
-4. Run `make`.
-5. Run `make install`.
+4. Run `make install`.
 
 ## License
 
