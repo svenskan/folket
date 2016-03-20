@@ -1,4 +1,4 @@
-NAME = Swedish-English
+NAME = Folket
 
 XML = dictionary.xml
 CSS = dictionary.css

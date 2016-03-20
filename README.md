@@ -7,10 +7,8 @@ Folket is a Swedish–English dictionary for OS X.
 ## Installation
 
 1. [Download][archive] an archive with the latest version of the dictionary.
-2. Unzip the archive and copy `Swedish-English.dictionary` to
-   `~/Library/Dictionaries`.
-3. Open the Dictionary app and activate the Swedish–English dictionary in the
-   settings.
+2. Unzip the archive and copy `Folket.dictionary` to `~/Library/Dictionaries`.
+3. Open the Dictionary app and activate the Folket dictionary in the settings.
 
 ## Usage
 
