@@ -344,12 +344,12 @@
   Folket is based on the
   <a href="http://folkets-lexikon.csc.kth.se/folkets/folkets.en.html">People’s
   Dictionary</a> (Folkets lexikon). The People’s Dictionary is free. Both the
-  English–Swedish dictionary and Swedish–English dictionary can be
+  English–Swedish and Swedish–English dictionaries can be
   <a href="http://folkets-lexikon.csc.kth.se/folkets/om.en.html">downloaded</a>
   for use under the terms of the
   <a href="http://creativecommons.org/licenses/by-sa/2.5">Creative Commons
-  Attribution-Share Alike 2.5 Generic</a> license. The source code of this
-  dictionary can be found on
+  Attribution-Share Alike 2.5 Generic</a> license. Folket is distributed under
+  the same terms, and its source code can be found on
   <a href="https://github.com/svenskan/folket">GitHub</a>.
 </p>
       </d:entry>
