@@ -39,7 +39,7 @@ is distributed under the same terms.
 The project is a fork of [MacFolket][macfolket], which is developed by
 [Christopher Loessl][loessl].
 
-[archive]: https://github.com/IvanUkhov/Folket/raw/gh-pages/Folket.zip
+[archive]: https://github.com/svenskan/folket/raw/gh-pages/Folket.zip
 [apple]: https://developer.apple.com/downloads
 
 [folkets-index]: http://folkets-lexikon.csc.kth.se/folkets/folkets.en.html
