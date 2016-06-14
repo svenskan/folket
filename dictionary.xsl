@@ -321,7 +321,7 @@
       <!-- Footer -->
       <d:entry id="front_back_matter" d:title="Front/Back Matter">
 <h1>Folket</h1>
-<p>Folket is a Swedish–English dictionary for OS X.</p>
+<p>Folket is a Swedish–English dictionary for macOS.</p>
 <p>
   <em>Author:</em>
   <a href="http://loessl.org">Christopher Loessl</a> and

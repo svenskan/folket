@@ -1,6 +1,6 @@
 # Folket (June 1, 2016)
 
-Folket is a Swedish–English dictionary for OS X.
+Folket is a Swedish–English dictionary for macOS.
 
 ![Dictionary](screenshot.png)
 
