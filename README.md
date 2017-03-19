@@ -20,10 +20,9 @@ Folket is a Swedish–English dictionary for macOS.
 ## Compilation
 
 1. Clone the repository.
-2. Download Apple’s [Dictionary Development Kit][apple], which is a part of the
-   package called “Auxiliary Tools for Xcode.”
-3. Move the “Dictionary Development Kit” directory from the package to the
-   directory of the repository.
+2. [Download](kit) the “Additional Tools for Xcode” package.
+3. Move the “Dictionary Development Kit” directory from the “Utilities”
+   directory found in the package to the directory of the repository.
 4. Run `make install`.
 
 ## License
@@ -40,7 +39,7 @@ The project is a fork of [MacFolket][macfolket], which is developed by
 [Christopher Loessl][loessl].
 
 [archive]: https://github.com/svenskan/folket/raw/gh-pages/Folket.zip
-[apple]: https://developer.apple.com/downloads
+[kit]: https://developer.apple.com/downloads
 
 [folkets-index]: http://folkets-lexikon.csc.kth.se/folkets/folkets.en.html
 [folkets-about]: http://folkets-lexikon.csc.kth.se/folkets/om.en.html

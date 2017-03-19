@@ -21,11 +21,10 @@ $(TARGET): $(XML) $(CSS) $(PLIST)
 	touch $(TARGET)
 
 $(XML): folkets_sv_en_public.xml folkets_en_sv_public.xml $(XSL)
-	sed '$$ d' folkets_sv_en_public.xml > $@_tmp
-	tail -n +3 folkets_en_sv_public.xml >> $@_tmp
-	xsltproc -o $@ $(XSL) $@_tmp
-	sed 's/\&amp;/\&/g' $@ > $@_tmp
-	mv $@_tmp $@
+	sed '$$ d' folkets_sv_en_public.xml > _$@
+	tail -n +3 folkets_en_sv_public.xml >> _$@
+	xsltproc -o $@ $(XSL) _$@
+	rm _$@
 
 folkets_%_public.xml:
 	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
