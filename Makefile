@@ -22,7 +22,8 @@ ${xml}: folkets_sv_en_public.xml folkets_en_sv_public.xml ${xsl}
 	sed '$$ d' folkets_sv_en_public.xml > _$@
 	tail -n +3 folkets_en_sv_public.xml >> _$@
 	xsltproc -o $@ ${xsl} _$@
-	rm _$@
+	sed 's/\&amp;\([#0-9a-z]*\);/\&\1;/g' $@ > _$@
+	mv _$@ $@
 
 folkets_%_public.xml:
 	curl -O http://folkets-lexikon.csc.kth.se/folkets/$@
