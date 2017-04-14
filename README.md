@@ -2,7 +2,7 @@
 
 Folket is a Swedish–English dictionary for macOS.
 
-![Dictionary](screenshot.png)
+![Dictionary](dictionary.png)
 
 ## Installation
 
