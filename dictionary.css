@@ -2,6 +2,7 @@
 @namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
 
 * {
+  color: #000;
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
